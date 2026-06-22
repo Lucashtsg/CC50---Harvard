@@ -1,0 +1,28 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+{
+    int height = get_int("Qual a altura que você deseja? ");
+
+    if (height > 1 && height < 10)
+    {
+
+            for (int j = 0; j < height; j++)
+            {
+
+                int contador = 0;
+                do{
+                    printf("#");
+                    contador++;
+
+
+                }while(contador <= j);
+                printf("\n");
+
+
+            }
+
+
+    }
+}
