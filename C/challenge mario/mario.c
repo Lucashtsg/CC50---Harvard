@@ -7,21 +7,33 @@ int main(void)
     if (height >= 1 && height < 10)
     {
 
-            for (int j = 0; j < height; j++)
+        for (int j = 0; j < height; j++) //para repetir cada degrau da plataforma
+        {
+            for (int space = 0; space < height - j - 1; space++) //repetir a quantidade de espaço do dregrau subindo
             {
-                for(int space = 0; space < height - j - 1; space++)
-                {
-                    printf(" ");
-                }
-                int contador = 0;
-                do{
-                    printf("#");
-                    contador++;
-                }while(contador <= j);
-                printf("\n");
+                printf(" ");
             }
 
+            // "do" para gerar a plataforma
+            int contador = 0;
+            do
+            {
+                printf("#");
+                contador++;
+            }
+            while (contador <= j); // depois que sair do loop ele vai criar dois de espaço entre as plataformas
+            printf("  ");
 
+            // do para a segunda plataforma
+            int contador2 = 0;
+            do
+            {
+                printf("#");
+                contador2++;
+            }
+            while (contador2 <= j);
+            printf("\n"); // depois de fazer uma linha ele pula a mesma e vai pra poxima
+        }
     }
     else
     {
